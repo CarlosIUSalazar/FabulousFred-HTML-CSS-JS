@@ -14,7 +14,7 @@ let userScore = 0;
 let color = null;
 
 function generateSequence(){
-    let randomNumber = Math.floor(Math.random() * Math.floor(max)) + 1;
+    let randomNumber = Math.floor(Math.random() * Math.floor(9)) + 1;
     generatedSequence.push(randomNumber);
 }
 
@@ -22,11 +22,12 @@ function playGame(){
     generateSequence();
 
     for (let i = 1; i < generatedSequence.length + 1; i++){
-        console.log(generatedSequence)
+        console.log("generatedSequnce",generatedSequence)
         if (generatedSequence[i] === 1){
-            buttonOne.style.backgroundColor = "white"
+            buttonOne.backgroundColor = "white"
         }
     }
 
 }
 
+playGame();
