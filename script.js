@@ -11,6 +11,7 @@ let buttonNine = document.getElementById("nine");
 let generatedSequence = [];
 let userSequence = [];
 let userScore = 0;
+let color = null;
 
 function generateSequence(){
     let randomNumber = Math.floor(Math.random() * Math.floor(max)) + 1;
