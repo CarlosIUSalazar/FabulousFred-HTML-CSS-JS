@@ -18,3 +18,7 @@ function generateSequence(){
     generatedSequence.push(randomNumber);
 }
 
+function playGame(){
+    generateSequence();
+}
+
