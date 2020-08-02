@@ -21,10 +21,11 @@ function generateSequence(){
 function playGame(){
     generateSequence();
 
-    for (let i = 1; i < generatedSequence.length + 1; i++){
+    for (let i = 0; i < generatedSequence.length; i++){
         console.log("generatedSequnce",generatedSequence)
+        console.log(generatedSequence[i])
         if (generatedSequence[i] === 1){
-            buttonOne.backgroundColor = "white"
+            buttonOne.style.backgroundColor = "white"
         }
     }
 
