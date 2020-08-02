@@ -8,4 +8,12 @@ let buttonSeven = document.getElementById("seven");
 let buttonEigth = document.getElementById("eigth");
 let buttonNine = document.getElementById("nine");
 
-alert("Hello")
+let generatedSequence = [];
+let userSequence = [];
+let userScore = 0;
+
+function generateSequence(){
+    let randomNumber = Math.floor(Math.random() * Math.floor(max)) + 1;
+    generatedSequence.push(randomNumber);
+}
+
