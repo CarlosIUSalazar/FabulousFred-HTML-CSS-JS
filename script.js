@@ -20,5 +20,12 @@ function generateSequence(){
 
 function playGame(){
     generateSequence();
+
+    for (let i = 1; i < generatedSequence.length + 1; i++){
+        if (generatedSequence[i] === 1){
+            buttonOne.style.backgroundColor = "white"
+        }
+    }
+
 }
 
