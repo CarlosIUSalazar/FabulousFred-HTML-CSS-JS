@@ -1,3 +1,7 @@
+body {
+  background-color: silver;
+}
+
 #one {
   height: 100px;
   width: 100px;
