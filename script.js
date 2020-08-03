@@ -20,7 +20,6 @@ function generateSequence(){
 
 function playGame(){
     generateSequence();
-
     for (let i = 0; i < generatedSequence.length; i++){
         console.log("generatedSequnce",generatedSequence)
         console.log(generatedSequence[i])
@@ -28,7 +27,6 @@ function playGame(){
             buttonOne.style.backgroundColor = "white"
         }
     }
-
 }
 
 playGame();
