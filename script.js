@@ -22,14 +22,20 @@ let generatedSequence = [];
 let userSequence = [];
 let userScore = 0;
 let color = null;
-let round = 1;
+let round = 0;
 let roundText = document.getElementById("round"); 
+let board = document.getElementById("board");
+let startButton = document.getElementById("gameStartButton");
+
 
 function playAudioOne() { 
   oneAudio.play(); 
+  buttonOne.classList.add("pressed");
+
 } 
 function playAudioTwo() { 
     twoAudio.play(); 
+    //buttonTwo.classList.add("pressed");
 } 
 function playAudioThree() { 
   threeAudio.play(); 
@@ -53,50 +59,73 @@ function playAudioNine() {
   nineAudio.play(); 
 } 
 
+function revealAll() {
+    startButton.remove();
+    board.style.visibility = "visible"
+    playGame();
+}
+
 function generateSequence(){
     let randomNumber = Math.floor(Math.random() * Math.floor(9)) + 1;
     generatedSequence.push(randomNumber);
 }
 
 function playGame(){
+    round++;
     roundText.innerHTML = round;
-    generateSequence();
+
+    setTimeout(function(){generateSequence()}, 1000);
+
     for (let i = 0; i < generatedSequence.length; i++){
         console.log("generatedSequnce",generatedSequence)
         console.log(generatedSequence[i])
         if (generatedSequence[i] === 1){
             buttonOne.style.backgroundColor = "white"
             playAudioOne();
-            buttonOne.style.backgroundColor = "red"
+            setTimeout(function(){buttonOne.style.backgroundColor = "red"}, 300);
         }
         if (generatedSequence[i] === 2){
-            buttonOne.style.backgroundColor = "white"
+            buttonTwo.style.backgroundColor = "white"
+            playAudioTwo();
+            setTimeout(function(){buttonTwo.style.backgroundColor = "yellow"}, 300);
         }
         if (generatedSequence[i] === 3){
-            buttonOne.style.backgroundColor = "white"
+            buttonThree.style.backgroundColor = "white"
+            playAudioThree();
+            setTimeout(function(){buttonThree.style.backgroundColor = "orange"}, 300);
         }
         if (generatedSequence[i] === 4){
-            buttonOne.style.backgroundColor = "white"
+            buttonFour.style.backgroundColor = "white"
+            playAudioFour();
+            setTimeout(function(){buttonFour.style.backgroundColor = "greenyellow"}, 300);
         }
         if (generatedSequence[i] === 5){
-            buttonOne.style.backgroundColor = "white"
+            buttonFive.style.backgroundColor = "white"
+            playAudioFive();
+            setTimeout(function(){buttonFive.style.backgroundColor = "violet"}, 300);
         }
         if (generatedSequence[i] === 6){
-            buttonOne.style.backgroundColor = "white"
+            buttonSix.style.backgroundColor = "white"
+            playAudioSix();
+            setTimeout(function(){buttonSix.style.backgroundColor = "limegreen"}, 300);
         }
         if (generatedSequence[i] === 7){
-            buttonOne.style.backgroundColor = "white"
+            buttonSeven.style.backgroundColor = "white"
+            playAudioSeven();
+            setTimeout(function(){buttonSeven.style.backgroundColor = "purple"}, 300);
         }
         if (generatedSequence[i] === 8){
-            buttonOne.style.backgroundColor = "white"
+            buttonEight.style.backgroundColor = "white"
+            playAudioEight();
+            setTimeout(function(){buttonEight.style.backgroundColor = "cyan"}, 300);
         }
         if (generatedSequence[i] === 9){
-            buttonOne.style.backgroundColor = "white"
+            buttonNine.style.backgroundColor = "white"
+            playAudioNine();
+            setTimeout(function(){buttonNine.style.backgroundColor = "blue"}, 300);
         }
     }
 }
-
-
 
 
 //playGame();

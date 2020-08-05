@@ -23,6 +23,10 @@ body {
 	top:1px;
 }
 
+#board {
+  visibility: hidden;
+}
+
 #one {
   height: 100px;
   width: 100px;
@@ -77,6 +81,7 @@ body {
   background-color: blue;
 }
 
-#round {
-
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
 }
