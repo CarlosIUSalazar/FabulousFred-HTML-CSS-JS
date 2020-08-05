@@ -18,6 +18,12 @@ function generateSequence(){
     generatedSequence.push(randomNumber);
 }
 
+let oneAudio = document.getElementById("one"); 
+
+function playAudio() { 
+  oneAudio.play(); 
+} 
+
 function playGame(){
     generateSequence();
     for (let i = 0; i < generatedSequence.length; i++){
@@ -25,6 +31,11 @@ function playGame(){
         console.log(generatedSequence[i])
         if (generatedSequence[i] === 1){
             buttonOne.style.backgroundColor = "white"
+            <audio controls>
+                <source src="horse.ogg" type="audio/ogg">
+                <source src="horse.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
         }
     }
 }
