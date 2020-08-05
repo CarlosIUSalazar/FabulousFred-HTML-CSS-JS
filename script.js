@@ -8,11 +8,6 @@ let buttonSeven = document.getElementById("seven");
 let buttonEight = document.getElementById("eight");
 let buttonNine = document.getElementById("nine");
 
-let generatedSequence = [];
-let userSequence = [];
-let userScore = 0;
-let color = null;
-
 let oneAudio = document.getElementById("myAudioOne"); 
 let twoAudio = document.getElementById("myAudioTwo"); 
 let threeAudio = document.getElementById("myAudioThree"); 
@@ -23,12 +18,12 @@ let sevenAudio = document.getElementById("myAudioSeven");
 let eightAudio = document.getElementById("myAudioEight"); 
 let nineAudio = document.getElementById("myAudioNine"); 
 
-
-function generateSequence(){
-    let randomNumber = Math.floor(Math.random() * Math.floor(9)) + 1;
-    generatedSequence.push(randomNumber);
-}
-
+let generatedSequence = [];
+let userSequence = [];
+let userScore = 0;
+let color = null;
+let round = 1;
+let roundText = document.getElementById("round"); 
 
 function playAudioOne() { 
   oneAudio.play(); 
@@ -58,19 +53,53 @@ function playAudioNine() {
   nineAudio.play(); 
 } 
 
+function generateSequence(){
+    let randomNumber = Math.floor(Math.random() * Math.floor(9)) + 1;
+    generatedSequence.push(randomNumber);
+}
 
 function playGame(){
+    roundText.innerHTML = round;
     generateSequence();
     for (let i = 0; i < generatedSequence.length; i++){
         console.log("generatedSequnce",generatedSequence)
         console.log(generatedSequence[i])
         if (generatedSequence[i] === 1){
             buttonOne.style.backgroundColor = "white"
+            playAudioOne();
+            buttonOne.style.backgroundColor = "red"
+        }
+        if (generatedSequence[i] === 2){
+            buttonOne.style.backgroundColor = "white"
+        }
+        if (generatedSequence[i] === 3){
+            buttonOne.style.backgroundColor = "white"
+        }
+        if (generatedSequence[i] === 4){
+            buttonOne.style.backgroundColor = "white"
+        }
+        if (generatedSequence[i] === 5){
+            buttonOne.style.backgroundColor = "white"
+        }
+        if (generatedSequence[i] === 6){
+            buttonOne.style.backgroundColor = "white"
+        }
+        if (generatedSequence[i] === 7){
+            buttonOne.style.backgroundColor = "white"
+        }
+        if (generatedSequence[i] === 8){
+            buttonOne.style.backgroundColor = "white"
+        }
+        if (generatedSequence[i] === 9){
+            buttonOne.style.backgroundColor = "white"
         }
     }
 }
 
-playGame();
+
+
+
+//playGame();
 
 
 
