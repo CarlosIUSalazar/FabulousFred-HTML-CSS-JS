@@ -5,7 +5,7 @@ let buttonFour = document.getElementById("four");
 let buttonFive = document.getElementById("five");
 let buttonSix = document.getElementById("six");
 let buttonSeven = document.getElementById("seven");
-let buttonEigth = document.getElementById("eigth");
+let buttonEight = document.getElementById("eight");
 let buttonNine = document.getElementById("nine");
 
 let generatedSequence = [];
@@ -14,6 +14,14 @@ let userScore = 0;
 let color = null;
 
 let oneAudio = document.getElementById("myAudioOne"); 
+let twoAudio = document.getElementById("myAudioTwo"); 
+let threeAudio = document.getElementById("myAudioThree"); 
+let fourAudio = document.getElementById("myAudioFour"); 
+let fiveAudio = document.getElementById("myAudioFive"); 
+let sixAudio = document.getElementById("myAudioSix"); 
+let sevenAudio = document.getElementById("myAudioSeven"); 
+let eightAudio = document.getElementById("myAudioEight"); 
+let nineAudio = document.getElementById("myAudioNine"); 
 
 
 function generateSequence(){
@@ -25,6 +33,31 @@ function generateSequence(){
 function playAudioOne() { 
   oneAudio.play(); 
 } 
+function playAudioTwo() { 
+    twoAudio.play(); 
+} 
+function playAudioThree() { 
+  threeAudio.play(); 
+} 
+function playAudioFour() { 
+    fourAudio.play(); 
+}
+function playAudioFive() { 
+  fiveAudio.play(); 
+} 
+function playAudioSix() { 
+    sixAudio.play(); 
+}
+function playAudioSeven() { 
+  sevenAudio.play(); 
+} 
+function playAudioEight() { 
+  eightAudio.play(); 
+} 
+function playAudioNine() { 
+  nineAudio.play(); 
+} 
+
 
 function playGame(){
     generateSequence();
@@ -38,4 +71,19 @@ function playGame(){
 }
 
 playGame();
-playAudioOne();
+
+
+
+
+
+
+
+//playAudioOne();
+//playAudioTwo();
+//playAudioThree();
+//playAudioFour();
+//playAudioFive();
+//playAudioSix();
+//playAudioSeven();
+//playAudioEight();
+//playAudioNine();
