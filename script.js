@@ -13,14 +13,16 @@ let userSequence = [];
 let userScore = 0;
 let color = null;
 
+let oneAudio = document.getElementById("myAudioOne"); 
+
+
 function generateSequence(){
     let randomNumber = Math.floor(Math.random() * Math.floor(9)) + 1;
     generatedSequence.push(randomNumber);
 }
 
-let oneAudio = document.getElementById("one"); 
 
-function playAudio() { 
+function playAudioOne() { 
   oneAudio.play(); 
 } 
 
@@ -31,12 +33,9 @@ function playGame(){
         console.log(generatedSequence[i])
         if (generatedSequence[i] === 1){
             buttonOne.style.backgroundColor = "white"
-            <audio controls>
-                <source src="horse.ogg" type="audio/ogg">
-                <source src="horse.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
         }
     }
 }
+
 playGame();
+playAudioOne();
