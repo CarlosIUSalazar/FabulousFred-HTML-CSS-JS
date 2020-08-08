@@ -64,12 +64,10 @@ function revealAll() {
     board.style.visibility = "visible"
     playGame();
 }
-
 function generateSequence(){
     let randomNumber = Math.floor(Math.random() * Math.floor(9)) + 1;
     generatedSequence.push(randomNumber);
 }
-
 function playGame(){
     round++;
     roundText.innerHTML = round;
