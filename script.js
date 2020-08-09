@@ -74,10 +74,10 @@ function generateSequence(){
     //console.log( "The sequence generated is", generatedSequence)
 }
 
-function restoreColor(number){
-    //let playAudioName = "playAudio" + number
-    `playAudio${number}();`
-}
+// function restoreColor(number){
+//     //let playAudioName = "playAudio" + number
+//     `playAudio${number}();`
+// }
 
 function playGame(){
     round++;
@@ -88,13 +88,13 @@ function playGame(){
         console.log(i)
         if (generatedSequence[i] === 1){
             buttonOne.style.backgroundColor = "white"
-            setTimeout(function(){restoreColor("One")}, 1000);
-            buttonOne.style.backgroundColor = "red";
+            setTimeout(function(){playAudioOne()}, 300);
+            setTimeout(function(){buttonOne.style.backgroundColor = "red"}, 300);
         }
         else if (generatedSequence[i] === 2){
             buttonTwo.style.backgroundColor = "white"
-            setTimeout(function(){restoreColor("Two")}, 1000);
-            buttonTwo.style.backgroundColor = "yellow";
+            setTimeout(function(){playAudioTwo()}, 300);
+            setTimeout(function(){buttonTwo.style.backgroundColor = "yellow"}, 300);
         }
         // else if (generatedSequence[i] === 3){
         //     buttonThree.style.backgroundColor = "white"
