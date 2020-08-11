@@ -27,7 +27,6 @@ let roundText = document.getElementById("round");
 let board = document.getElementById("board");
 let startButton = document.getElementById("gameStartButton");
 
-
 function playAudioOne() { 
   oneAudio.play(); 
   buttonOne.classList.add("pressed");
