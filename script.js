@@ -66,12 +66,17 @@ function revealAll() {
 
 function generateSequence(){
     for (let i = 0; i < 10; i++){
-        let randomNumber = Math.floor(Math.random() * Math.floor(9)) + 1;
+        let randomNumber = Math.floor(Math.random() * Math.floor(2)) + 1;
         generatedSequence.push(randomNumber);
     }
     //console.log("generatedSequence inside generateSequence()", generatedSequence)
     return generatedSequence;
     //console.log( "The sequence generated is", generatedSequence)
+}
+
+function restoreColor(number){
+    //let playAudioName = "playAudio" + number
+    `playAudio${number}();`
 }
 
 function playGame(){
@@ -80,50 +85,58 @@ function playGame(){
     generateSequence();
     console.log("generatedSequence", generatedSequence)
     for (let i = 0; i < generatedSequence.length; i++){
+        console.log(i)
         if (generatedSequence[i] === 1){
             buttonOne.style.backgroundColor = "white"
-            playAudioOne();
-            setTimeout(function(){buttonOne.style.backgroundColor = "red"}, 300);
+            setTimeout(function(){restoreColor("One")}, 1000);
+            buttonOne.style.backgroundColor = "red";
         }
-        // if (generatedSequence[i] === 2){
-        //     buttonTwo.style.backgroundColor = "white"
-        //     playAudioTwo();
-        //     setTimeout(function(){buttonTwo.style.backgroundColor = "yellow"}, 300);
-        // }
-        // if (generatedSequence[i] === 3){
+        else if (generatedSequence[i] === 2){
+            buttonTwo.style.backgroundColor = "white"
+            setTimeout(function(){restoreColor("Two")}, 1000);
+            buttonTwo.style.backgroundColor = "yellow";
+        }
+        // else if (generatedSequence[i] === 3){
         //     buttonThree.style.backgroundColor = "white"
         //     playAudioThree();
-        //     setTimeout(function(){buttonThree.style.backgroundColor = "orange"}, 300);
+        //     setTimeout(function(){buttonThree.style.backgroundColor = "orange"}, 400);
+        //     setTimeout(function(){console.log("waiting")}, 500);
         // }
-        // if (generatedSequence[i] === 4){
+        // else if (generatedSequence[i] === 4){
         //     buttonFour.style.backgroundColor = "white"
         //     playAudioFour();
-        //     setTimeout(function(){buttonFour.style.backgroundColor = "greenyellow"}, 300);
+        //     setTimeout(function(){buttonFour.style.backgroundColor = "greenyellow"}, 400);
+        //     setTimeout(function(){console.log("waiting")}, 500);
         // }
-        // if (generatedSequence[i] === 5){
+        // else if (generatedSequence[i] === 5){
         //     buttonFive.style.backgroundColor = "white"
         //     playAudioFive();
-        //     setTimeout(function(){buttonFive.style.backgroundColor = "violet"}, 300);
+        //     setTimeout(function(){buttonFive.style.backgroundColor = "violet"}, 400);
+        //     setTimeout(function(){console.log("waiting")}, 500);
         // }
-        // if (generatedSequence[i] === 6){
+        // else if (generatedSequence[i] === 6){
         //     buttonSix.style.backgroundColor = "white"
         //     playAudioSix();
-        //     setTimeout(function(){buttonSix.style.backgroundColor = "limegreen"}, 300);
+        //     setTimeout(function(){buttonSix.style.backgroundColor = "limegreen"}, 400);
+        //     setTimeout(function(){console.log("waiting")}, 500);
         // }
-        // if (generatedSequence[i] === 7){
+        // else if (generatedSequence[i] === 7){
         //     buttonSeven.style.backgroundColor = "white"
         //     playAudioSeven();
-        //     setTimeout(function(){buttonSeven.style.backgroundColor = "purple"}, 300);
+        //     setTimeout(function(){buttonSeven.style.backgroundColor = "purple"}, 400);
+        //     setTimeout(function(){console.log("waiting")}, 500);
         // }
-        // if (generatedSequence[i] === 8){
+        // else if (generatedSequence[i] === 8){
         //     buttonEight.style.backgroundColor = "white"
         //     playAudioEight();
-        //     setTimeout(function(){buttonEight.style.backgroundColor = "cyan"}, 300);
+        //     setTimeout(function(){buttonEight.style.backgroundColor = "cyan"}, 400);
+        //     setTimeout(function(){console.log("waiting")}, 500);
         // }
-        // if (generatedSequence[i] === 9){
+        // else if (generatedSequence[i] === 9){
         //     buttonNine.style.backgroundColor = "white"
         //     playAudioNine();
-        //     setTimeout(function(){buttonNine.style.backgroundColor = "blue"}, 300);
+        //     setTimeout(function(){buttonNine.style.backgroundColor = "blue"}, 400);
+        //     setTimeout(function(){console.log("waiting")}, 500);
         // }
     }
 }
