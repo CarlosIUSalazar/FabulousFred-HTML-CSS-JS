@@ -63,16 +63,21 @@ function revealAll() {
     board.style.visibility = "visible"
     playGame();
 }
+
 function generateSequence(){
-    let randomNumber = Math.floor(Math.random() * Math.floor(9)) + 1;
-    generatedSequence.push(randomNumber);
+    for (let i = 0; i < 10; i++){
+        let randomNumber = Math.floor(Math.random() * Math.floor(9)) + 1;
+        generatedSequence.push(randomNumber);
+    }
+    return generatedSequence;
+    //console.log( "The sequence generated is", generatedSequence)
 }
+
 function playGame(){
     round++;
     roundText.innerHTML = round;
-
     setTimeout(function(){generateSequence()}, 1000);
-
+    console.log("generatedSequence", generatedSequence)
     for (let i = 0; i < generatedSequence.length; i++){
         console.log("generatedSequnce",generatedSequence)
         console.log(generatedSequence[i])
