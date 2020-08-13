@@ -139,3 +139,21 @@ function playGame(){
 
 //playGame();
 
+        // else if (generatedSequence[i] === 7){
+        //     buttonSeven.style.backgroundColor = "white"
+        //     playAudioSeven();
+        //     setTimeout(function(){buttonSeven.style.backgroundColor = "purple"}, 400);
+        //     setTimeout(function(){console.log("waiting")}, 500);
+        // }
+        // else if (generatedSequence[i] === 8){
+        //     buttonEight.style.backgroundColor = "white"
+        //     playAudioEight();
+        //     setTimeout(function(){buttonEight.style.backgroundColor = "cyan"}, 400);
+        //     setTimeout(function(){console.log("waiting")}, 500);
+        // }
+        // else if (generatedSequence[i] === 9){
+        //     buttonNine.style.backgroundColor = "white"
+        //     playAudioNine();
+        //     setTimeout(function(){buttonNine.style.backgroundColor = "blue"}, 400);
+        //     setTimeout(function(){console.log("waiting")}, 500);
+        // }
