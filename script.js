@@ -144,18 +144,3 @@ function playGame(){
 
 //playGame();
 
-
-
-
-
-
-
-//playAudioOne();
-//playAudioTwo();
-//playAudioThree();
-//playAudioFour();
-//playAudioFive();
-//playAudioSix();
-//playAudioSeven();
-//playAudioEight();
-//playAudioNine();
