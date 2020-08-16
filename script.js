@@ -78,7 +78,6 @@ function generateSequence(){
 //     //let playAudioName = "playAudio" + number
 //     `playAudio${number}();`
 // }
-
 function playGame(){
     round++;
     roundText.innerHTML = round;
