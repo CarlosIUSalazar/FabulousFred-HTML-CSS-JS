@@ -74,10 +74,6 @@ function generateSequence(){
     //console.log( "The sequence generated is", generatedSequence)
 }
 
-// function restoreColor(number){
-//     //let playAudioName = "playAudio" + number
-//     `playAudio${number}();`
-// }
 function playGame(){
     round++;
     roundText.innerHTML = round;
